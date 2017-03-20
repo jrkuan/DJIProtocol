@@ -1,0 +1,43 @@
+﻿<Window x:Class="DJIProtocolTest.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DJIProtocolTest"
+        mc:Ignorable="d"
+        Title="DJI Development" Height="350" Width="250">
+    <Grid Width="240">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="120"></ColumnDefinition>
+            <ColumnDefinition Width="120"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition Height="auto"></RowDefinition>
+        </Grid.RowDefinitions>
+        
+        <Button Width="120" Grid.Column="0" Grid.Row="0" Command="{Binding ArmCommand}">Arm</Button>
+        <Button Width="120" Grid.Row="1" Command="{Binding DisarmCommand}">Disarm</Button>
+        <Button Width="120" Grid.Row="2" Command="{Binding TakeoffCommand}">Auto Takeoff</Button>
+        <Button Width="120" Grid.Row="3" Command="{Binding LandCommand}">Auto Land</Button>
+        <Button Width="120" Grid.Row="4" Command="{Binding ReturnToHomeCommand}">Return To Home</Button>
+        <Button Width="120" Grid.Row="5" Command="{Binding UploadMissionCommand}">Upload Waypoint Mission</Button>
+        <Button Width="120" Grid.Row="6" Command="{Binding StartWaypointMissionCommand}">Start Waypoints</Button>
+        <Button Width="120" Grid.Row="7" Command="{Binding StartFollowMeCommand}">Start Follow Me</Button>
+
+        <Button Width="120" Grid.Column="1" Grid.Row="0" Command="{Binding DownloadMissionCommand}">Download Waypoints</Button>
+        <Button Width="120" Grid.Column="1" Grid.Row="1" Command="{Binding NudgeCommand}">Nudge</Button>
+        <Button Width="120" Grid.Column="1" Grid.Row="2" Command="{Binding HighLaunchCommand}">High Launch</Button>
+        <Label Width="120" Grid.Column="1" Grid.Row="3" Content="{Binding Health}"></Label>
+        <Label Width="120" Grid.Column="1" Grid.Row="4" Content="{Binding FlightStatus}"></Label>
+        <Label Width="120" Grid.Column="1" Grid.Row="5" Content="{Binding Velocity}"></Label>
+
+    </Grid>
+</Window>
